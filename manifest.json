@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Bring back Friends",
+  "version": "1.0",
+  "description": "A simple extension that reverts 'Connections' back to 'Friends' on roblox.com.",
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "action": {
+    "default_title": "Bring back Friends",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*.roblox.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
